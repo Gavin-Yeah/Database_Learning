@@ -12,21 +12,17 @@ The notes for the course: https://www.coursera.org/learn/intro-to-databases-back
 7. ALTER TABLE table_name [add/modify/drop] column_name datatype;
 8. TRUNCATE TABLE table_name; delete the data from table
 9. --comment
-10. `CREATE TABLE Orders (`
-
-`OrderID int NOT NULL,`
-
-`OrderNumber int NOT NULL,`
-
-`PersonID int,`
-
-`PRIMARY KEY (OrderID),`
-
-`CONSTRAINT FK_PersonOrder FOREIGN KEY (PersonID)`
-
-`REFERENCES Persons(PersonID)`
-
-`);`
+10.
+```sql
+CREATE TABLE Orders (
+OrderID int NOT NULL,
+OrderNumber int NOT NULL,
+PersonID int,
+PRIMARY KEY (OrderID),
+CONSTRAINT FK_PersonOrder FOREIGN KEY (PersonID)
+REFERENCES Persons(PersonID)
+    );
+```
 
 ## Data Query Language: Select
 
